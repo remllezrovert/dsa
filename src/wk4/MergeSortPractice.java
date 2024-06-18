@@ -10,7 +10,7 @@ public class MergeSortPractice{
         int fence = arr.length / 2;
         while (min <= max) {
 
-            fence = (max + min) / 2;                        //THIS IS A BRAIN FUCK. HOW DOES IT WORK?
+            fence = (max + min) / 2;
             if (arr[fence] == search)
                 return fence;
             if (arr[fence] < search){
