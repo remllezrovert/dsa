@@ -1,0 +1,130 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs22 \cf0 *** Test Heap Sort ***\
+\
+Before Sorting: [abc, def, abcd, bce, abx, acfe, bfr, xyz, de, tyu, ab, abcd, xy, zxy, abx, def]\
+After Sorting:  [ab, abc, abcd, abcd, abx, abx, acfe, bce, bfr, de, def, def, tyu, xy, xyz, zxy]\
+\
+*** Test Dijkstra (dijkstra1.txt) ***\
+\
+Distance array (from v0): [0, 10, 10, 3, 5, infty, 10]\
+Parent array (from v0):   [-1, 0, 1, 0, 3, -1, 3]\
+\
+Distance array (from v1): [17, 0, 0, 5, 7, infty, 12]\
+Parent array (from v1):   [2, -1, 1, 1, 3, -1, 3]\
+\
+Distance array (from v2): [17, 27, 0, 20, 22, infty, 27]\
+Parent array (from v2):   [2, 0, -1, 0, 3, -1, 3]\
+\
+Distance array (from v3): [34, 44, 17, 0, 2, infty, 7]\
+Parent array (from v3):   [2, 0, 3, -1, 3, -1, 3]\
+\
+Distance array (from v4): [infty, infty, infty, infty, 0, infty, infty]\
+Parent array (from v4):   [-1, -1, -1, -1, -1, -1, -1]\
+\
+Distance array (from v5): [infty, infty, infty, infty, 3, 0, 2]\
+Parent array (from v5):   [-1, -1, -1, -1, 5, -1, 5]\
+\
+Distance array (from v6): [infty, infty, infty, infty, infty, infty, 0]\
+Parent array (from v6):   [-1, -1, -1, -1, -1, -1, -1]\
+\
+*** Test Dijkstra (dijkstra2.txt) ***\
+\
+Distance array (from v0): [0, 10, 10, 12, 1, 8, 19]\
+Parent array (from v0):   [-1, 0, 1, 2, 0, 4, 3]\
+\
+Distance array (from v1): [5, 0, 0, 2, 6, 11, 9]\
+Parent array (from v1):   [3, -1, 1, 2, 0, 6, 3]\
+\
+Distance array (from v2): [5, 15, 0, 2, 6, 11, 9]\
+Parent array (from v2):   [3, 0, -1, 2, 0, 6, 3]\
+\
+Distance array (from v3): [3, 13, 13, 0, 4, 9, 7]\
+Parent array (from v3):   [3, 0, 1, -1, 0, 6, 3]\
+\
+Distance array (from v4): [infty, infty, infty, infty, 0, 7, infty]\
+Parent array (from v4):   [-1, -1, -1, -1, -1, 4, -1]\
+\
+Distance array (from v5): [infty, infty, infty, infty, infty, 0, infty]\
+Parent array (from v5):   [-1, -1, -1, -1, -1, -1, -1]\
+\
+Distance array (from v6): [infty, infty, infty, infty, infty, 2, 0]\
+Parent array (from v6):   [-1, -1, -1, -1, -1, 6, -1]\
+\
+*** Union-Find ***\
+\
+Initial sets are 0-15\
+\
+UNION(0,1)\
+UNION(4,5)\
+UNION(8,9)\
+UNION(12,13)\
+\
+List containing  0: [0, 1]\
+List containing  1: [0, 1]\
+List containing  2: [2]\
+List containing  3: [3]\
+List containing  4: [4, 5]\
+List containing  5: [4, 5]\
+List containing  6: [6]\
+List containing  7: [7]\
+List containing  8: [8, 9]\
+List containing  9: [8, 9]\
+List containing 10: [10]\
+List containing 11: [11]\
+List containing 12: [12, 13]\
+List containing 13: [12, 13]\
+List containing 14: [14]\
+List containing 15: [15]\
+\
+UNION(0,5)\
+UNION(10,12)\
+UNION(0,10)\
+\
+List containing  0: [0, 1, 5, 4, 10, 13, 12]\
+List containing  1: [0, 1, 5, 4, 10, 13, 12]\
+List containing  2: [2]\
+List containing  3: [3]\
+List containing  4: [0, 1, 5, 4, 10, 13, 12]\
+List containing  5: [0, 1, 5, 4, 10, 13, 12]\
+List containing  6: [6]\
+List containing  7: [7]\
+List containing  8: [8, 9]\
+List containing  9: [8, 9]\
+List containing 10: [0, 1, 5, 4, 10, 13, 12]\
+List containing 11: [11]\
+List containing 12: [0, 1, 5, 4, 10, 13, 12]\
+List containing 13: [0, 1, 5, 4, 10, 13, 12]\
+List containing 14: [14]\
+List containing 15: [15]\
+\
+UNION(6,8)\
+UNION(8,5)\
+\
+List containing  0: [0, 1, 5, 4, 10, 13, 12, 6, 9, 8]\
+List containing  1: [0, 1, 5, 4, 10, 13, 12, 6, 9, 8]\
+List containing  2: [2]\
+List containing  3: [3]\
+List containing  4: [0, 1, 5, 4, 10, 13, 12, 6, 9, 8]\
+List containing  5: [0, 1, 5, 4, 10, 13, 12, 6, 9, 8]\
+List containing  6: [0, 1, 5, 4, 10, 13, 12, 6, 9, 8]\
+List containing  7: [7]\
+List containing  8: [0, 1, 5, 4, 10, 13, 12, 6, 9, 8]\
+List containing  9: [0, 1, 5, 4, 10, 13, 12, 6, 9, 8]\
+List containing 10: [0, 1, 5, 4, 10, 13, 12, 6, 9, 8]\
+List containing 11: [11]\
+List containing 12: [0, 1, 5, 4, 10, 13, 12, 6, 9, 8]\
+List containing 13: [0, 1, 5, 4, 10, 13, 12, 6, 9, 8]\
+List containing 14: [14]\
+List containing 15: [15]\
+\
+*** Kruskal ***\
+\
+MST has weight 37\
+The edges are: [<6, 7, 1>, <2, 8, 2>, <5, 6, 2>, <0, 1, 4>, <2, 5, 4>, <2, 3, 7>, <0, 7, 8>, <3, 4, 9>]}

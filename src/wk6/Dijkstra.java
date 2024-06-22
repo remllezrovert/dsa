@@ -6,7 +6,8 @@ import java.util.PriorityQueue;
 
 public class Dijkstra extends Graph {
 
-	public int distance[], parent[];
+	public int distance[];
+	public int parent[];
 	private boolean closed[];
 
 	public Dijkstra(String filePath) throws FileNotFoundException { // complete this constructor
@@ -17,9 +18,10 @@ public class Dijkstra extends Graph {
 	}
 
 	public void execute(int source) { // complete this method
+	
 		boolean[] closed = new boolean[numVertices];
-		int distance[] = new int[numVertices];
-		int parent[] = new int[numVertices];
+		distance = new int[numVertices];
+		parent = new int[numVertices];
 		for (int i =0; i < distance.length; i++){
 			distance[i] = Integer.MAX_VALUE;
 			parent[i] = -1;
@@ -35,9 +37,9 @@ public class Dijkstra extends Graph {
 			if (closed[minVertex]) 
 				continue; 
 			closed[minVertex] = true;
+			if (adjList.get(minVertex) != null)
 			adjList.get(minVertex).forEach((adjEdge) ->{
 				int adjVertex = adjEdge.dest;
-				//adjEdge.dest = adjVertex;                       //what is adjVertex? 
 				if (!closed[adjVertex]){
 					int newDist = distance[minVertex] + adjEdge.weight;
 					if (newDist < distance[adjVertex]){
@@ -47,11 +49,6 @@ public class Dijkstra extends Graph {
 					}
 				}
 			});
-			
-			
 		}
-
-
-		
 	}
 }
