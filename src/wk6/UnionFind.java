@@ -41,7 +41,7 @@ public class UnionFind {
 	}
 
 	public void doUnion(int x, int y) { // complete this method
-			ArrayList<ArrayList<Integer>> da = new ArrayList<>();
+		//ArrayList<ArrayList<Integer>> da = new ArrayList<>();
 		ArrayList<Integer> dax = find(x);
 		ArrayList<Integer> day = find(y);
 		if (!dax.equals(day)){

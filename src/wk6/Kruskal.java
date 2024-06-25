@@ -13,6 +13,7 @@ public class Kruskal extends Graph {
 		Graph g = IOHelper.readWeightedGraph(filePath);
 		numVertices = g.numVertices;
 		adjList = g.adjList;
+		//g.adjList.forEach((v) -> {for (Edge i: v) System.out.println(i.toString());});
 
 	}
 
@@ -22,11 +23,13 @@ public ArrayList<Edge> execute() { // complete this method
 	    for (ArrayList<Edge> edges : adjList) {
             edgeList.addAll(edges);
         }
+	
 	edgeList.sort((e1, e2) -> {
 	if (e1.weight == e2.weight)
 		return Integer.compare(e1.dest, e2.dest);
 	return e1.weight - e2.weight;
     });
+
 
 	UnionFind objUF= new UnionFind(numVertices);
 	int numEdgesAdded = 0;
@@ -43,6 +46,7 @@ public ArrayList<Edge> execute() { // complete this method
 		}
 	}
 
+	//for (Edge i: da) System.out.println(i.toString());
 	return da;
 }
 
